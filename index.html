@@ -1,122 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanmay Khandelwal — Portfolio</title>
+<!-- ONLY showing important edited parts — rest remains EXACT same -->
 
-<link rel="stylesheet" href="./style.css">
-</head>
+<!-- NAME -->
+<span class="glitch" data-text="TANMAY KHANDELWAL">TANMAY KHANDELWAL</span>
 
-<body>
-
-<!-- NAV -->
-<nav>
-    <a class="nav-logo">TK<span>.</span></a>
-    <ul class="nav-links">
-        <li><a href="#home">~/home</a></li>
-        <li><a href="#about">~/about</a></li>
-        <li><a href="#achievements">~/achievements</a></li>
-        <li><a href="#projects">~/projects</a></li>
-        <li><a href="#gallery">~/gallery</a></li>
-        <li><a href="#contact">~/contact</a></li>
-    </ul>
-</nav>
-
-<!-- HERO -->
-<section id="home">
-    <div class="hero-content">
-
-        <div>
-            <p class="hero-label">// STUDENT DEVELOPER</p>
-
-            <h1 class="hero-name">TANMAY KHANDELWAL</h1>
-
-            <div class="hero-typing">
-                <span id="typed-text"></span><span class="cursor"></span>
-            </div>
-
-            <p class="hero-desc">
-                B.Tech CSE student at MIT Vishwaprayag University, Solapur.
-                Passionate about building real-world tech solutions and exploring AI.
-            </p>
-
-            <div class="hero-btns">
-                <a href="#projects" class="btn-primary">VIEW PROJECTS</a>
-                <a href="#contact" class="btn-secondary">CONTACT ME</a>
-            </div>
-        </div>
-
-        <div>
-            <img src="assets/images/profile.jpg" class="hero-img">
-        </div>
-
-    </div>
-</section>
+<!-- TYPING TEXT (SCRIPT SECTION) -->
+<script>
+const phrases = [
+    'Web Developer',
+    'AI Enthusiast',
+    'Student'
+];
+</script>
 
 <!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am Tanmay Khandelwal, a B.Tech CSE student passionate about web development and AI.
-        I enjoy building real-world projects and continuously improving my skills.
-    </p>
-</section>
+<p class="hero-desc">
+    B.Tech CSE student at MIT Vishwaprayag University, Solapur.
+    Passionate about building real-world projects and exploring AI.
+</p>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-        <li>AI4A Project</li>
-        <li>Design Thinking Project</li>
-        <li>ACE Project</li>
-        <li>Coursera Certification</li>
-        <li>Cisco NetAcad Certification</li>
-        <li>Yuva AI Certification</li>
-        <li>Built Personal Portfolio Website</li>
-        <li>GitHub Project Deployment</li>
-    </ul>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li>Portfolio Website – Modern responsive portfolio with animations</li>
-        <li>Digital Logic Circuits – Designed fundamental circuits</li>
-    </ul>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-    <h2>Certificates</h2>
-
-    <div class="gallery-grid">
-
-        <img src="assets/certificates/cert1.jpg">
-        <img src="assets/certificates/cert2.jpg">
-        <img src="assets/certificates/cert3.jpg">
-        <img src="assets/certificates/cert4.jpg">
-        <img src="assets/certificates/cert5.jpg">
-        <img src="assets/certificates/cert6.jpg">
-        <img src="assets/certificates/cert7.jpg">
-        <img src="assets/certificates/cert8.jpg">
-        <img src="assets/certificates/cert9.jpg">
-        <img src="assets/certificates/cert10.jpg">
-
-    </div>
-</section>
+<!-- ABOUT TERMINAL -->
+<div><span class="key">"name"</span>: <span class="val">"Tanmay Khandelwal"</span>,</div>
+<div><span class="key">"degree"</span>: <span class="val">"B.Tech CSE"</span>,</div>
+<div><span class="key">"college"</span>: <span class="val">"MIT Vishwaprayag University"</span>,</div>
+<div><span class="key">"location"</span>: <span class="val">"Solapur, Maharashtra"</span>,</div>
 
 <!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: 26tanmay.k@gmail.com</p>
-    <p>Phone: 7820915001</p>
-    <p>GitHub: github.com/tanmayk007</p>
-    <p>Location: Solapur, Maharashtra</p>
-</section>
+<a href="mailto:26tanmay.k@gmail.com" class="contact-value">26tanmay.k@gmail.com</a>
+<a href="tel:+917820915001" class="contact-value">+91 7820915001</a>
+<a href="https://github.com/tanmayk007" target="_blank" class="contact-value">github.com/tanmayk007</a>
 
-<script src="./script.js"></script>
+<!-- GALLERY (UPDATED TO 10 CERTIFICATES) -->
+<div class="gallery-grid">
 
-</body>
-</html>
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert1.jpg')">
+    <img src="assets/certificates/cert1.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert2.jpg')">
+    <img src="assets/certificates/cert2.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert3.jpg')">
+    <img src="assets/certificates/cert3.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert4.jpg')">
+    <img src="assets/certificates/cert4.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert5.jpg')">
+    <img src="assets/certificates/cert5.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert6.jpg')">
+    <img src="assets/certificates/cert6.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert7.jpg')">
+    <img src="assets/certificates/cert7.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert8.jpg')">
+    <img src="assets/certificates/cert8.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert9.jpg')">
+    <img src="assets/certificates/cert9.jpg">
+</div>
+
+<div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert10.jpg')">
+    <img src="assets/certificates/cert10.jpg">
+</div>
+
+</div>
