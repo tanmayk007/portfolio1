@@ -1,379 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanmay Khandelwal — Portfolio</title>
-    <meta name="description" content="Tanmay Khandelwal — B.Tech CSE student at MIT Vishwaprayag University. Developer, AI Enthusiast & Creative Problem Solver.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="scroll-progress"></div>
-<!-- Background orbs -->
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
-<!-- ══════════════════ NAVBAR ══════════════════ -->
-<nav id="navbar">
-    <a href="#home" class="nav-logo">Tanmay<span>.</span></a>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
-</nav>
-<!-- ══════════════════ HERO ══════════════════ -->
-<section id="home">
-    <div class="hero-inner">
-        <div class="hero-content">
-            <div class="hero-eyebrow">PORTFOLIO · 2025</div>
-            <h1 class="hero-name">
-                Tanmay<br>
-                <em>Khandelwal.</em>
-            </h1>
-            <p class="hero-role">
-                &gt;&nbsp;<span id="typed-text"></span><span class="cursor">|</span>
-            </p>
-            <p class="hero-desc">
-                A first-year B.Tech CSE student at MIT Vishwaprayag University, Solapur.
-                I build with curiosity, think in code, and turn bold ideas into digital reality.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn-primary"><span>View My Work</span></a>
-                <a href="#contact" class="btn-ghost">Get In Touch</a>
-            </div>
-        </div>
-        <div class="hero-photo-wrap">
-            <div class="hero-photo-ring">
-                <div class="hero-photo-inner">
-                    <!-- UNCOMMENT ONCE YOU HAVE PHOTO: -->
-                    <!-- <img src="assets/images/profile.jpg" alt="Tanmay Khandelwal" class="hero-photo"> -->
-                    <div class="hero-photo-placeholder">
-                        <span>🖼</span>
-                        Add profile.jpg<br>in assets/images/
-                    </div>
-                </div>
-            </div>
-            <div class="hero-badge">
-                <div class="badge-dot"></div>
-                OPEN TO OPPORTUNITIES
-            </div>
-            <div class="hero-stat-float stat-f1">
-                <span class="hsf-num">10</span>
-                <span class="hsf-lbl">Certs</span>
-            </div>
-            <div class="hero-stat-float stat-f2">
-                <span class="hsf-num">2+</span>
-                <span class="hsf-lbl">Projects</span>
-            </div>
-        </div>
-    </div>
-    <div class="hero-scroll-hint">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-    </div>
-</section>
-<!-- ══════════════════ ABOUT ══════════════════ -->
-<section id="about">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">// 01 — ABOUT ME</span>
-            <h2 class="section-title">Who I Am</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="about-grid">
-            <div class="about-text reveal">
-                <p>Hey! I'm <strong>Tanmay Khandelwal</strong>, a first-year B.Tech Computer Science & Engineering student at <strong>MIT Vishwaprayag University, Solapur</strong>.</p>
-                <p>I love exploring the intersection of technology and creativity. Whether it's writing clean code, diving into AI, or cracking a tough problem — I'm always up for the challenge.</p>
-                <p>Outside academics, I stay curious and build projects with real-world impact. I believe in learning by doing and growing every single day.</p>
-                <div class="info-pill-grid">
-                    <div class="info-pill"><span class="pill-icon">🎓</span> B.Tech CSE — 1st Year</div>
-                    <div class="info-pill"><span class="pill-icon">🏛</span> MIT Vishwaprayag University</div>
-                    <div class="info-pill"><span class="pill-icon">📍</span> Solapur, Maharashtra</div>
-                    <div class="info-pill"><span class="pill-icon">⌥</span> github.com/tanmayk007</div>
-                </div>
-                <div class="stats-row">
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="10">0</span>
-                        <span class="stat-lbl">CERTIFICATES</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">2+</span>
-                        <span class="stat-lbl">PROJECTS</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">1st</span>
-                        <span class="stat-lbl">B.TECH YEAR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="skills-card reveal reveal-delay-1">
-                <div class="skills-section-title">Technical Skills</div>
-                <div class="skill-list">
-                    <span class="skill-chip violet">Python</span>
-                    <span class="skill-chip violet">HTML / CSS</span>
-                    <span class="skill-chip violet">JavaScript</span>
-                    <span class="skill-chip coral">C Language</span>
-                    <span class="skill-chip coral">Git &amp; GitHub</span>
-                    <span class="skill-chip coral">AI / ML Basics</span>
-                    <span class="skill-chip gold">Problem Solving</span>
-                    <span class="skill-chip gold">Data Structures</span>
-                    <span class="skill-chip gold">Research</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ══════════════════ ACHIEVEMENTS ══════════════════ -->
-<section id="achievements">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">// 02 — ACHIEVEMENTS</span>
-            <h2 class="section-title">What I've Earned</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="ach-grid">
-            <div class="ach-card reveal">
-                <div class="ach-num">01</div>
-                <div class="ach-icon-wrap">🤖</div>
-                <div class="ach-title">AI4A Project</div>
-                <div class="ach-desc">Completed the AI for All initiative exploring practical AI applications in everyday and Indian societal contexts.</div>
-                <span class="ach-badge">AI / MACHINE LEARNING</span>
-            </div>
-            <div class="ach-card reveal reveal-delay-1">
-                <div class="ach-num">02</div>
-                <div class="ach-icon-wrap">💡</div>
-                <div class="ach-title">Design Thinking Project</div>
-                <div class="ach-desc">Applied human-centered design methodology to prototype innovative solutions for real-world user problems.</div>
-                <span class="ach-badge">INNOVATION</span>
-            </div>
-            <div class="ach-card reveal reveal-delay-2">
-                <div class="ach-num">03</div>
-                <div class="ach-icon-wrap">⚗️</div>
-                <div class="ach-title">ACE Project</div>
-                <div class="ach-desc">Research on green chemistry solutions for chemical leaching prevention from solid waste, using natural adsorbents.</div>
-                <span class="ach-badge">GREEN CHEMISTRY</span>
-            </div>
-            <div class="ach-card reveal">
-                <div class="ach-num">04</div>
-                <div class="ach-icon-wrap">📜</div>
-                <div class="ach-title">Coursera Certificate</div>
-                <div class="ach-desc">Earned a professional certification covering core computer science and software engineering fundamentals.</div>
-                <span class="ach-badge">CERTIFICATION</span>
-            </div>
-            <div class="ach-card reveal reveal-delay-1">
-                <div class="ach-num">05</div>
-                <div class="ach-icon-wrap">🌐</div>
-                <div class="ach-title">Cisco NetAcad</div>
-                <div class="ach-desc">Completed Cisco Networking Academy certification covering networking fundamentals, cybersecurity, and internet technologies.</div>
-                <span class="ach-badge">NETWORKING</span>
-            </div>
-            <div class="ach-card reveal reveal-delay-2">
-                <div class="ach-num">06</div>
-                <div class="ach-icon-wrap">🚀</div>
-                <div class="ach-title">Yuva AI Certificate</div>
-                <div class="ach-desc">Completed the Yuva AI program gaining hands-on experience with AI tools and their real-world applications.</div>
-                <span class="ach-badge">AI / INDIA</span>
-            </div>
-            <div class="ach-card reveal">
-                <div class="ach-num">07</div>
-                <div class="ach-icon-wrap">🏅</div>
-                <div class="ach-title">[Achievement 7]</div>
-                <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
-                <span class="ach-badge">COMING SOON</span>
-            </div>
-            <div class="ach-card reveal reveal-delay-1">
-                <div class="ach-num">08</div>
-                <div class="ach-icon-wrap">🏅</div>
-                <div class="ach-title">[Achievement 8]</div>
-                <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
-                <span class="ach-badge">COMING SOON</span>
-            </div>
-            <div class="ach-card reveal reveal-delay-2">
-                <div class="ach-num">09</div>
-                <div class="ach-icon-wrap">🏅</div>
-                <div class="ach-title">[Achievement 9]</div>
-                <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
-                <span class="ach-badge">COMING SOON</span>
-            </div>
-            <div class="ach-card reveal">
-                <div class="ach-num">10</div>
-                <div class="ach-icon-wrap">🏅</div>
-                <div class="ach-title">[Achievement 10]</div>
-                <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
-                <span class="ach-badge">COMING SOON</span>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ══════════════════ PROJECTS ══════════════════ -->
-<section id="projects">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">// 03 — PROJECTS</span>
-            <h2 class="section-title">What I've Built</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="proj-grid">
-            <div class="proj-card reveal">
-                <div class="proj-glow"></div>
-                <div class="proj-header">
-                    <div class="proj-icon">🌐</div>
-                    <a href="https://github.com/tanmayk007" class="proj-link" target="_blank">View →</a>
-                </div>
-                <div class="proj-title">Portfolio Website</div>
-                <p class="proj-desc">A beautifully designed personal portfolio with modern UI, smooth animations, responsive layout, and an interactive gallery. Deployed via GitHub Pages.</p>
-                <div class="tech-list">
-                    <span class="tech-pill">HTML</span>
-                    <span class="tech-pill">CSS</span>
-                    <span class="tech-pill">JavaScript</span>
-                    <span class="tech-pill">GitHub Pages</span>
-                </div>
-            </div>
-            <div class="proj-card reveal reveal-delay-1">
-                <div class="proj-glow"></div>
-                <div class="proj-header">
-                    <div class="proj-icon">⚡</div>
-                    <a href="https://github.com/tanmayk007" class="proj-link" target="_blank">View →</a>
-                </div>
-                <div class="proj-title">Digital Logic Circuits</div>
-                <p class="proj-desc">Designed and implemented core digital logic circuits — combinational and sequential — demonstrating fundamental computer architecture principles.</p>
-                <div class="tech-list">
-                    <span class="tech-pill">Digital Logic</span>
-                    <span class="tech-pill">Computer Arch.</span>
-                    <span class="tech-pill">Circuit Design</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ══════════════════ GALLERY ══════════════════ -->
-<section id="gallery">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">// 04 — GALLERY</span>
-            <h2 class="section-title">Certificates</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="gallery-grid">
-            <!-- CERT 1 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert1.jpg')">
-                <img src="assets/certificates/cert1.jpg" alt="Certificate 1" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert1.jpg</div>
-            <!-- CERT 2 -->
-            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert2.jpg</div>
-            <!-- CERT 3 -->
-            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert3.jpg</div>
-            <!-- CERT 4 -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert4.jpg</div>
-            <!-- CERT 5 -->
-            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert5.jpg</div>
-            <!-- CERT 6 -->
-            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert6.jpg</div>
-            <!-- CERT 7 -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert7.jpg</div>
-            <!-- CERT 8 -->
-            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert8.jpg</div>
-            <!-- CERT 9 -->
-            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert9.jpg</div>
-            <!-- CERT 10 -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert10.jpg</div>
-        </div>
-    </div>
-</section>
-<!-- ══════════════════ CONTACT ══════════════════ -->
-<section id="contact">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">// 05 — CONTACT</span>
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="contact-grid">
-            <div class="reveal">
-                <p class="contact-intro">
-                    I'm always open to new opportunities, collaborations, or just a friendly conversation about tech. Feel free to reach out!
-                </p>
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <div>
-                        <span class="contact-lbl">EMAIL</span>
-                        <a href="mailto:26tanmay.k@gmail.com" class="contact-val">26tanmay.k@gmail.com</a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">⌥</div>
-                    <div>
-                        <span class="contact-lbl">GITHUB</span>
-                        <a href="https://github.com/tanmayk007" target="_blank" class="contact-val">github.com/tanmayk007</a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <span class="contact-lbl">LOCATION</span>
-                        <span class="contact-val">Solapur, Maharashtra, India</span>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🎓</div>
-                    <div>
-                        <span class="contact-lbl">UNIVERSITY</span>
-                        <span class="contact-val">MIT Vishwaprayag University</span>
-                    </div>
-                </div>
-            </div>
-            <div class="form-wrap reveal reveal-delay-1">
-                <div class="form-title">Send a Message</div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label">YOUR NAME</label>
-                        <input type="text" id="f-name" class="form-input" placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">YOUR EMAIL</label>
-                        <input type="email" id="f-email" class="form-input" placeholder="Your email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">SUBJECT</label>
-                    <input type="text" id="f-subject" class="form-input" placeholder="What's it about?">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">MESSAGE</label>
-                    <textarea id="f-message" class="form-textarea" placeholder="Write your message..."></textarea>
-                </div>
-                <button class="form-btn" id="form-btn">Send Message →</button>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ══════════════════ FOOTER ══════════════════ -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-name">Tanmay <span>Khandelwal</span></div>
-        <div class="footer-copy">© 2025 · All rights reserved · Built with ♡</div>
-        <div class="footer-links">
-            <a href="https://github.com/tanmayk007" target="_blank">GitHub</a>
-        </div>
-    </div>
-</footer>
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lb-close" onclick="closeLightbox()">✕</button>
-    <img id="lb-img" src="" alt="Certificate" onclick="event.stopPropagation()">
-</div>
-<script src="script.js"></script>
-</body>
-</html>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:#e8e8e8;
+    font-family:sans-serif;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#000;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.nav-logo{
+    color:#00ff88;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#aaa;
+    text-decoration:none;
+}
+
+.nav-links a:hover{
+    color:#00ff88;
+}
+
+/* HERO */
+#home{
+    padding-top:100px;
+    min-height:100vh;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px;
+}
+
+.hero-name{
+    font-size:45px;
+}
+
+.hero-desc{
+    color:#aaa;
+    margin:15px 0;
+}
+
+.hero-img{
+    width:260px;
+    border:2px solid #00ff88;
+}
+
+/* BUTTONS */
+.btn-primary{
+    background:#00ff88;
+    color:#000;
+    padding:10px 20px;
+    text-decoration:none;
+}
+
+.btn-secondary{
+    border:1px solid #00ff88;
+    color:#00ff88;
+    padding:10px 20px;
+    text-decoration:none;
+}
+
+/* SECTION */
+section{
+    padding:60px 30px;
+}
+
+/* GALLERY */
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+
+.gallery-grid img{
+    width:100%;
+    border:2px solid #00ff88;
+}
