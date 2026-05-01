@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ═══════════════════════════════════════════════
-         🔴 CHANGE: Update page title with her name
-    ════════════════════════════════════════════════ -->
-    <title>Sanjana Gaikwad — Portfolio</title>
+    <title>Tanmay Khandelwal — Portfolio</title>
+    <meta name="description" content="Tanmay Khandelwal — B.Tech CSE student at MIT Vishwaprayag University. Developer, AI Enthusiast & Creative Problem Solver.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- floating background orbs (CSS animated) -->
+<div id="scroll-progress"></div>
+<!-- Background orbs -->
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <div class="orb orb-3"></div>
-
-<!-- ════════════════════ NAVBAR ════════════════════ -->
-<nav>
-    <!-- 🔴 CHANGE: Update initials/logo text -->
-    <a href="#home" class="nav-logo">Sanjana<span>.</span></a>
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav id="navbar">
+    <a href="#home" class="nav-logo">Tanmay<span>.</span></a>
     <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -35,58 +31,58 @@
         <span></span><span></span><span></span>
     </button>
 </nav>
-
-<!-- ════════════════════ HERO ════════════════════ -->
+<!-- ══════════════════ HERO ══════════════════ -->
 <section id="home">
     <div class="hero-inner">
-        <div>
+        <div class="hero-content">
             <div class="hero-eyebrow">PORTFOLIO · 2025</div>
-            <!-- 🔴 CHANGE: Update her full name below in BOTH places -->
             <h1 class="hero-name">
-                Sanjana
-                <em>Gaikwad.</em>
+                Tanmay<br>
+                <em>Khandelwal.</em>
             </h1>
             <p class="hero-role">
-                &gt;&nbsp;<span id="typed-text"></span><span style="color:var(--rose);animation:blink 1s infinite;display:inline-block;">|</span>
+                &gt;&nbsp;<span id="typed-text"></span><span class="cursor">|</span>
             </p>
             <p class="hero-desc">
-                <!-- 🔴 CHANGE: Update her short bio here -->
-                A passionate B.Tech CSE student at MIT Vishwaprayag University, Solapur.
-                Driven by curiosity, creativity, and a love for building things through code.
+                A first-year B.Tech CSE student at MIT Vishwaprayag University, Solapur.
+                I build with curiosity, think in code, and turn bold ideas into digital reality.
             </p>
             <div class="hero-actions">
-                <a href="#projects" class="btn-rose">View My Work</a>
-                <a href="#contact" class="btn-outline">Get In Touch</a>
+                <a href="#projects" class="btn-primary"><span>View My Work</span></a>
+                <a href="#contact" class="btn-ghost">Get In Touch</a>
             </div>
         </div>
-
-        <!-- ── PROFILE PHOTO ───────────────────────────────
-             🔴 HOW TO ADD HER PHOTO:
-             1. Put her photo in:  assets/images/profile.jpg
-             2. Delete the <div class="hero-photo-placeholder"> block
-             3. Uncomment the <img> line below
-        ─────────────────────────────────────────────── -->
         <div class="hero-photo-wrap">
             <div class="hero-photo-ring">
-                <!-- UNCOMMENT THIS LINE AND DELETE THE PLACEHOLDER DIV BELOW ONCE YOU HAVE THE PHOTO -->
-                <!-- <img src="assets/images/profile.jpg" alt="Sanjana Gaikwad" class="hero-photo"> -->
-
-                <!-- DELETE THIS BLOCK ONCE PHOTO IS ADDED -->
-                <div class="hero-photo-placeholder">
-                    <span>🖼</span>
-                    ADD PHOTO HERE<br>
-                    assets/images/<br>profile.jpg
+                <div class="hero-photo-inner">
+                    <!-- UNCOMMENT ONCE YOU HAVE PHOTO: -->
+                    <!-- <img src="assets/images/profile.jpg" alt="Tanmay Khandelwal" class="hero-photo"> -->
+                    <div class="hero-photo-placeholder">
+                        <span>🖼</span>
+                        Add profile.jpg<br>in assets/images/
+                    </div>
                 </div>
             </div>
             <div class="hero-badge">
                 <div class="badge-dot"></div>
                 OPEN TO OPPORTUNITIES
             </div>
+            <div class="hero-stat-float stat-f1">
+                <span class="hsf-num">10</span>
+                <span class="hsf-lbl">Certs</span>
+            </div>
+            <div class="hero-stat-float stat-f2">
+                <span class="hsf-num">2+</span>
+                <span class="hsf-lbl">Projects</span>
+            </div>
         </div>
     </div>
+    <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
 </section>
-
-<!-- ════════════════════ ABOUT ════════════════════ -->
+<!-- ══════════════════ ABOUT ══════════════════ -->
 <section id="about">
     <div class="container">
         <div class="section-header reveal">
@@ -95,59 +91,49 @@
             <div class="section-line"></div>
         </div>
         <div class="about-grid">
-            <!-- Left: About text -->
             <div class="about-text reveal">
-                <!-- 🔴 CHANGE: Update her bio paragraphs -->
-                <p>Hey! I'm <strong>Sanjana Gaikwad</strong>, a first-year B.Tech Computer Science & Engineering student at <strong>MIT Vishwaprayag University, Solapur</strong>.</p>
-                <p>I love exploring the intersection of technology and creativity. Whether it's writing clean code, learning about AI, or tackling a tough problem — I'm always up for the challenge.</p>
-                <p>Outside of academics, I enjoy staying curious and building projects that have a real-world impact. I believe in learning by doing and growing every single day.</p>
-
+                <p>Hey! I'm <strong>Tanmay Khandelwal</strong>, a first-year B.Tech Computer Science & Engineering student at <strong>MIT Vishwaprayag University, Solapur</strong>.</p>
+                <p>I love exploring the intersection of technology and creativity. Whether it's writing clean code, diving into AI, or cracking a tough problem — I'm always up for the challenge.</p>
+                <p>Outside academics, I stay curious and build projects with real-world impact. I believe in learning by doing and growing every single day.</p>
                 <div class="info-pill-grid">
                     <div class="info-pill"><span class="pill-icon">🎓</span> B.Tech CSE — 1st Year</div>
                     <div class="info-pill"><span class="pill-icon">🏛</span> MIT Vishwaprayag University</div>
                     <div class="info-pill"><span class="pill-icon">📍</span> Solapur, Maharashtra</div>
-                    <!-- 🔴 CHANGE: Update her GitHub username -->
-                    <div class="info-pill"><span class="pill-icon">⌥</span> github.com/[ADD_USERNAME]</div>
+                    <div class="info-pill"><span class="pill-icon">⌥</span> github.com/tanmayk007</div>
                 </div>
-
                 <div class="stats-row">
-                    <div class="stat-card glass-card">
-                        <!-- 🔴 CHANGE: Update cert count when known -->
-                        <span class="stat-num">10</span>
+                    <div class="stat-card">
+                        <span class="stat-num" data-target="10">0</span>
                         <span class="stat-lbl">CERTIFICATES</span>
                     </div>
-                    <div class="stat-card glass-card">
+                    <div class="stat-card">
                         <span class="stat-num">2+</span>
                         <span class="stat-lbl">PROJECTS</span>
                     </div>
-                    <div class="stat-card glass-card">
+                    <div class="stat-card">
                         <span class="stat-num">1st</span>
                         <span class="stat-lbl">B.TECH YEAR</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Right: Skills -->
-            <div class="glass-card skills-section reveal reveal-delay-1">
+            <div class="skills-card reveal reveal-delay-1">
                 <div class="skills-section-title">Technical Skills</div>
                 <div class="skill-list">
-                    <!-- 🔴 CHANGE: Add/remove her actual skills -->
-                    <span class="skill-chip rose">Python</span>
-                    <span class="skill-chip rose">HTML / CSS</span>
-                    <span class="skill-chip rose">JavaScript</span>
-                    <span class="skill-chip gold">C Language</span>
-                    <span class="skill-chip gold">Git &amp; GitHub</span>
-                    <span class="skill-chip gold">AI / ML Basics</span>
-                    <span class="skill-chip blue">Problem Solving</span>
-                    <span class="skill-chip blue">Data Structures</span>
-                    <span class="skill-chip blue">Research</span>
+                    <span class="skill-chip violet">Python</span>
+                    <span class="skill-chip violet">HTML / CSS</span>
+                    <span class="skill-chip violet">JavaScript</span>
+                    <span class="skill-chip coral">C Language</span>
+                    <span class="skill-chip coral">Git &amp; GitHub</span>
+                    <span class="skill-chip coral">AI / ML Basics</span>
+                    <span class="skill-chip gold">Problem Solving</span>
+                    <span class="skill-chip gold">Data Structures</span>
+                    <span class="skill-chip gold">Research</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- ════════════════════ ACHIEVEMENTS ════════════════════ -->
+<!-- ══════════════════ ACHIEVEMENTS ══════════════════ -->
 <section id="achievements">
     <div class="container">
         <div class="section-header reveal">
@@ -156,105 +142,80 @@
             <div class="section-line"></div>
         </div>
         <div class="ach-grid">
-
-            <!-- ─────────────────────────────────────────────
-                 🔴 HOW TO ADD/EDIT ACHIEVEMENTS:
-                 Copy one <div class="ach-card glass-card"> block,
-                 paste it, and change the icon, title, desc, badge.
-                 The number (.ach-num) updates automatically by CSS counter
-                 — just keep adding cards!
-            ───────────────────────────────────────────── -->
-
-            <div class="ach-card glass-card reveal">
+            <div class="ach-card reveal">
                 <div class="ach-num">01</div>
                 <div class="ach-icon-wrap">🤖</div>
-                <!-- 🔴 CHANGE: Update achievement name & description -->
                 <div class="ach-title">AI4A Project</div>
                 <div class="ach-desc">Completed the AI for All initiative exploring practical AI applications in everyday and Indian societal contexts.</div>
                 <span class="ach-badge">AI / MACHINE LEARNING</span>
             </div>
-
-            <div class="ach-card glass-card reveal reveal-delay-1">
+            <div class="ach-card reveal reveal-delay-1">
                 <div class="ach-num">02</div>
                 <div class="ach-icon-wrap">💡</div>
                 <div class="ach-title">Design Thinking Project</div>
                 <div class="ach-desc">Applied human-centered design methodology to prototype innovative solutions for real-world user problems.</div>
                 <span class="ach-badge">INNOVATION</span>
             </div>
-
-            <div class="ach-card glass-card reveal reveal-delay-2">
+            <div class="ach-card reveal reveal-delay-2">
                 <div class="ach-num">03</div>
                 <div class="ach-icon-wrap">⚗️</div>
                 <div class="ach-title">ACE Project</div>
                 <div class="ach-desc">Research on green chemistry solutions for chemical leaching prevention from solid waste, using natural adsorbents.</div>
                 <span class="ach-badge">GREEN CHEMISTRY</span>
             </div>
-
-            <div class="ach-card glass-card reveal">
+            <div class="ach-card reveal">
                 <div class="ach-num">04</div>
                 <div class="ach-icon-wrap">📜</div>
                 <div class="ach-title">Coursera Certificate</div>
                 <div class="ach-desc">Earned a professional certification covering core computer science and software engineering fundamentals.</div>
                 <span class="ach-badge">CERTIFICATION</span>
             </div>
-
-            <div class="ach-card glass-card reveal reveal-delay-1">
+            <div class="ach-card reveal reveal-delay-1">
                 <div class="ach-num">05</div>
                 <div class="ach-icon-wrap">🌐</div>
                 <div class="ach-title">Cisco NetAcad</div>
                 <div class="ach-desc">Completed Cisco Networking Academy certification covering networking fundamentals, cybersecurity, and internet technologies.</div>
                 <span class="ach-badge">NETWORKING</span>
             </div>
-
-            <div class="ach-card glass-card reveal reveal-delay-2">
+            <div class="ach-card reveal reveal-delay-2">
                 <div class="ach-num">06</div>
                 <div class="ach-icon-wrap">🚀</div>
                 <div class="ach-title">Yuva AI Certificate</div>
-                <div class="ach-desc">Completed the Yuva AI program gaining hands-on experience with AI tools and their applications.</div>
+                <div class="ach-desc">Completed the Yuva AI program gaining hands-on experience with AI tools and their real-world applications.</div>
                 <span class="ach-badge">AI / INDIA</span>
             </div>
-
-            <!-- 🔴 ADD MORE ACHIEVEMENTS BELOW — she has 10 certificates total -->
-            <!-- Copy a block above and paste here, update the number, icon, title, desc, badge -->
-
-            <div class="ach-card glass-card reveal">
+            <div class="ach-card reveal">
                 <div class="ach-num">07</div>
                 <div class="ach-icon-wrap">🏅</div>
-                <!-- 🔴 CHANGE: Replace with her actual 7th achievement -->
                 <div class="ach-title">[Achievement 7]</div>
                 <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
                 <span class="ach-badge">COMING SOON</span>
             </div>
-
-            <div class="ach-card glass-card reveal reveal-delay-1">
+            <div class="ach-card reveal reveal-delay-1">
                 <div class="ach-num">08</div>
                 <div class="ach-icon-wrap">🏅</div>
                 <div class="ach-title">[Achievement 8]</div>
                 <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
                 <span class="ach-badge">COMING SOON</span>
             </div>
-
-            <div class="ach-card glass-card reveal reveal-delay-2">
+            <div class="ach-card reveal reveal-delay-2">
                 <div class="ach-num">09</div>
                 <div class="ach-icon-wrap">🏅</div>
                 <div class="ach-title">[Achievement 9]</div>
                 <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
                 <span class="ach-badge">COMING SOON</span>
             </div>
-
-            <div class="ach-card glass-card reveal">
+            <div class="ach-card reveal">
                 <div class="ach-num">10</div>
                 <div class="ach-icon-wrap">🏅</div>
                 <div class="ach-title">[Achievement 10]</div>
                 <div class="ach-desc">Add a short description of this achievement or certification here once you have the details.</div>
                 <span class="ach-badge">COMING SOON</span>
             </div>
-
         </div>
     </div>
 </section>
-
-<!-- ════════════════════ PROJECTS ════════════════════ -->
+<!-- ══════════════════ PROJECTS ══════════════════ -->
 <section id="projects">
     <div class="container">
         <div class="section-header reveal">
@@ -263,16 +224,14 @@
             <div class="section-line"></div>
         </div>
         <div class="proj-grid">
-
-            <!-- 🔴 CHANGE: Update her project names and descriptions -->
-            <div class="proj-card glass-card reveal">
+            <div class="proj-card reveal">
+                <div class="proj-glow"></div>
                 <div class="proj-header">
                     <div class="proj-icon">🌐</div>
-                    <!-- 🔴 CHANGE: Add her GitHub link -->
-                    <a href="#" class="proj-link">View →</a>
+                    <a href="https://github.com/tanmayk007" class="proj-link" target="_blank">View →</a>
                 </div>
                 <div class="proj-title">Portfolio Website</div>
-                <p class="proj-desc">A beautifully designed personal portfolio website with glassmorphism UI, smooth animations, responsive layout, and interactive gallery. Deployed via GitHub Pages.</p>
+                <p class="proj-desc">A beautifully designed personal portfolio with modern UI, smooth animations, responsive layout, and an interactive gallery. Deployed via GitHub Pages.</p>
                 <div class="tech-list">
                     <span class="tech-pill">HTML</span>
                     <span class="tech-pill">CSS</span>
@@ -280,11 +239,11 @@
                     <span class="tech-pill">GitHub Pages</span>
                 </div>
             </div>
-
-            <div class="proj-card glass-card reveal reveal-delay-1">
+            <div class="proj-card reveal reveal-delay-1">
+                <div class="proj-glow"></div>
                 <div class="proj-header">
                     <div class="proj-icon">⚡</div>
-                    <a href="#" class="proj-link">View →</a>
+                    <a href="https://github.com/tanmayk007" class="proj-link" target="_blank">View →</a>
                 </div>
                 <div class="proj-title">Digital Logic Circuits</div>
                 <p class="proj-desc">Designed and implemented core digital logic circuits — combinational and sequential — demonstrating fundamental computer architecture principles.</p>
@@ -294,14 +253,10 @@
                     <span class="tech-pill">Circuit Design</span>
                 </div>
             </div>
-
-            <!-- 🔴 ADD MORE PROJECTS: Copy a block above and paste here -->
-
         </div>
     </div>
 </section>
-
-<!-- ════════════════════ GALLERY ════════════════════ -->
+<!-- ══════════════════ GALLERY ══════════════════ -->
 <section id="gallery">
     <div class="container">
         <div class="section-header reveal">
@@ -309,93 +264,35 @@
             <h2 class="section-title">Certificates</h2>
             <div class="section-line"></div>
         </div>
-
-        <!-- ─────────────────────────────────────────────
-             🔴 HOW TO ADD CERTIFICATES:
-             1. Put cert images in:  assets/certificates/
-                Name them: cert1.jpg, cert2.jpg ... cert10.jpg
-             2. For each one:
-                - Delete the <div class="cert-placeholder"> block
-                - Uncomment the <div class="gallery-item"> block just above it
-             Do them one by one as you get the images!
-        ───────────────────────────────────────────── -->
         <div class="gallery-grid">
-
             <!-- CERT 1 -->
             <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert1.jpg')">
                 <img src="assets/certificates/cert1.jpg" alt="Certificate 1" loading="lazy">
                 <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
             </div> -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert1.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal"><span>📜</span>cert1.jpg</div>
             <!-- CERT 2 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert2.jpg')">
-                <img src="assets/certificates/cert2.jpg" alt="Certificate 2" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert2.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert2.jpg</div>
             <!-- CERT 3 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert3.jpg')">
-                <img src="assets/certificates/cert3.jpg" alt="Certificate 3" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert3.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert3.jpg</div>
             <!-- CERT 4 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert4.jpg')">
-                <img src="assets/certificates/cert4.jpg" alt="Certificate 4" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert4.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal"><span>📜</span>cert4.jpg</div>
             <!-- CERT 5 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert5.jpg')">
-                <img src="assets/certificates/cert5.jpg" alt="Certificate 5" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert5.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert5.jpg</div>
             <!-- CERT 6 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert6.jpg')">
-                <img src="assets/certificates/cert6.jpg" alt="Certificate 6" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert6.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert6.jpg</div>
             <!-- CERT 7 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert7.jpg')">
-                <img src="assets/certificates/cert7.jpg" alt="Certificate 7" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert7.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal"><span>📜</span>cert7.jpg</div>
             <!-- CERT 8 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert8.jpg')">
-                <img src="assets/certificates/cert8.jpg" alt="Certificate 8" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert8.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal reveal-delay-1"><span>📜</span>cert8.jpg</div>
             <!-- CERT 9 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert9.jpg')">
-                <img src="assets/certificates/cert9.jpg" alt="Certificate 9" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert9.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal reveal-delay-2"><span>📜</span>cert9.jpg</div>
             <!-- CERT 10 -->
-            <!-- <div class="gallery-item reveal" onclick="openLightbox('assets/certificates/cert10.jpg')">
-                <img src="assets/certificates/cert10.jpg" alt="Certificate 10" loading="lazy">
-                <div class="gallery-overlay"><span class="gallery-overlay-label">VIEW</span></div>
-            </div> -->
-            <div class="cert-placeholder reveal"><span>📜</span>cert10.jpg<br>Add when ready</div>
-
+            <div class="cert-placeholder reveal"><span>📜</span>cert10.jpg</div>
         </div>
     </div>
 </section>
-
-<!-- ════════════════════ CONTACT ════════════════════ -->
+<!-- ══════════════════ CONTACT ══════════════════ -->
 <section id="contact">
     <div class="container">
         <div class="section-header reveal">
@@ -408,88 +305,75 @@
                 <p class="contact-intro">
                     I'm always open to new opportunities, collaborations, or just a friendly conversation about tech. Feel free to reach out!
                 </p>
-
-                <!-- 🔴 CHANGE: Update email -->
-                <div class="contact-card glass-card">
+                <div class="contact-card">
                     <div class="contact-icon">✉️</div>
                     <div>
                         <span class="contact-lbl">EMAIL</span>
-                        <a href="mailto:[ADD_HER_EMAIL]" class="contact-val">[Add her email]</a>
+                        <a href="mailto:26tanmay.k@gmail.com" class="contact-val">26tanmay.k@gmail.com</a>
                     </div>
                 </div>
-
-                <div class="contact-card glass-card">
-                    <div class="contact-icon">📱</div>
-                    <div>
-                        <span class="contact-lbl">PHONE</span>
-                        <!-- 🔴 CHANGE: Her phone is already filled in below -->
-                        <a href="tel:+918999691239" class="contact-val">+91 89996 91239</a>
-                    </div>
-                </div>
-
-                <!-- 🔴 CHANGE: Update her GitHub username in both href and text -->
-                <div class="contact-card glass-card">
+                <div class="contact-card">
                     <div class="contact-icon">⌥</div>
                     <div>
                         <span class="contact-lbl">GITHUB</span>
-                        <a href="https://github.com/[ADD_USERNAME]" target="_blank" class="contact-val">github.com/[ADD_USERNAME]</a>
+                        <a href="https://github.com/tanmayk007" target="_blank" class="contact-val">github.com/tanmayk007</a>
                     </div>
                 </div>
-
-                <div class="contact-card glass-card">
+                <div class="contact-card">
                     <div class="contact-icon">📍</div>
                     <div>
                         <span class="contact-lbl">LOCATION</span>
                         <span class="contact-val">Solapur, Maharashtra, India</span>
                     </div>
                 </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🎓</div>
+                    <div>
+                        <span class="contact-lbl">UNIVERSITY</span>
+                        <span class="contact-val">MIT Vishwaprayag University</span>
+                    </div>
+                </div>
             </div>
-
-            <!-- Contact Form -->
-            <div class="form-wrap glass-card reveal reveal-delay-1">
+            <div class="form-wrap reveal reveal-delay-1">
                 <div class="form-title">Send a Message</div>
                 <div class="form-row">
                     <div class="form-group">
                         <label class="form-label">YOUR NAME</label>
-                        <input type="text" class="form-input" placeholder="Your name">
+                        <input type="text" id="f-name" class="form-input" placeholder="Your name">
                     </div>
                     <div class="form-group">
                         <label class="form-label">YOUR EMAIL</label>
-                        <input type="email" class="form-input" placeholder="Your email">
+                        <input type="email" id="f-email" class="form-input" placeholder="Your email">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="form-label">SUBJECT</label>
-                    <input type="text" class="form-input" placeholder="What's it about?">
+                    <input type="text" id="f-subject" class="form-input" placeholder="What's it about?">
                 </div>
                 <div class="form-group">
                     <label class="form-label">MESSAGE</label>
-                    <textarea class="form-textarea" placeholder="Write your message..."></textarea>
+                    <textarea id="f-message" class="form-textarea" placeholder="Write your message..."></textarea>
                 </div>
-                <button class="form-btn">Send Message →</button>
+                <button class="form-btn" id="form-btn">Send Message →</button>
             </div>
         </div>
     </div>
 </section>
-
-<!-- ════════════════════ FOOTER ════════════════════ -->
+<!-- ══════════════════ FOOTER ══════════════════ -->
 <footer>
     <div class="footer-inner">
-        <div class="footer-name">Sanjana <span>Gaikwad</span></div>
+        <div class="footer-name">Tanmay <span>Khandelwal</span></div>
         <div class="footer-copy">© 2025 · All rights reserved · Built with ♡</div>
+        <div class="footer-links">
+            <a href="https://github.com/tanmayk007" target="_blank">GitHub</a>
+        </div>
     </div>
 </footer>
-
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lb-close" onclick="closeLightbox()">✕</button>
     <img id="lb-img" src="" alt="Certificate" onclick="event.stopPropagation()">
 </div>
-
-<style>
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-</style>
-
 <script src="script.js"></script>
 </body>
 </html>

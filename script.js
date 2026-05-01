@@ -1,8 +1,7 @@
-/* ============================================================
-   SANJANA GAIKWAD — PORTFOLIO SCRIPTS
-   ============================================================ */
-
-// ── Typing Effect ────────────────────────────────────────────
+/* ══════════════════════════════════════════════
+   TANMAY KHANDELWAL — PORTFOLIO SCRIPTS
+   ══════════════════════════════════════════════ */
+// ── Typing Effect ──
 (function () {
     const phrases = [
         'B.Tech CSE Student',
@@ -14,22 +13,24 @@
     let i = 0, j = 0, deleting = false;
     const el = document.getElementById('typed-text');
     if (!el) return;
-
     function type() {
         const cur = phrases[i % phrases.length];
         el.textContent = deleting ? cur.slice(0, --j) : cur.slice(0, ++j);
-        if (!deleting && j === cur.length) {
-            deleting = true;
-            setTimeout(type, 2000);
-            return;
-        }
+        if (!deleting && j === cur.length) { deleting = true; setTimeout(type, 2000); return; }
         if (deleting && j === 0) { deleting = false; i++; }
         setTimeout(type, deleting ? 50 : 90);
     }
     setTimeout(type, 1200);
 })();
-
-// ── Scroll Reveal ────────────────────────────────────────────
+// ── Scroll Progress Bar ──
+window.addEventListener('scroll', () => {
+    const prog = document.getElementById('scroll-progress');
+    if (prog) {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        prog.style.width = (window.scrollY / h * 100) + '%';
+    }
+}, { passive: true });
+// ── Scroll Reveal ──
 const revealEls = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver((entries) => {
     entries.forEach((entry, idx) => {
@@ -40,11 +41,28 @@ const obs = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.08 });
 revealEls.forEach(el => obs.observe(el));
-
-// ── Active Nav Highlight ─────────────────────────────────────
+// ── Counter Animation ──
+const counterEls = document.querySelectorAll('.stat-num[data-target]');
+const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.target);
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = current;
+            }, 40);
+            counterObs.unobserve(el);
+        }
+    });
+}, { threshold: 0.5 });
+counterEls.forEach(el => counterObs.observe(el));
+// ── Active Nav Highlight ──
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
-
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => {
@@ -54,19 +72,23 @@ window.addEventListener('scroll', () => {
         a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
 }, { passive: true });
-
-// ── Mobile Nav ───────────────────────────────────────────────
+// ── Nav Shadow on Scroll ──
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 40
+        ? '0 4px 30px rgba(124,58,237,0.08)'
+        : 'none';
+}, { passive: true });
+// ── Mobile Nav ──
 function toggleNav() {
     document.getElementById('nav-links').classList.toggle('open');
 }
-// close on link click
 document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => {
         document.getElementById('nav-links').classList.remove('open');
     });
 });
-
-// ── Lightbox ─────────────────────────────────────────────────
+// ── Lightbox ──
 function openLightbox(src) {
     const lb = document.getElementById('lightbox');
     document.getElementById('lb-img').src = src;
@@ -81,19 +103,8 @@ function closeLightbox() {
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeLightbox();
 });
-
-// ── Smooth Nav Shadow ────────────────────────────────────────
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 40) {
-        nav.style.boxShadow = '0 4px 40px rgba(0,0,0,0.4)';
-    } else {
-        nav.style.boxShadow = 'none';
-    }
-}, { passive: true });
-
-// ── Contact form (no back-end, just feedback) ─────────────────
-const formBtn = document.querySelector('.form-btn');
+// ── Contact Form (no backend) ──
+const formBtn = document.getElementById('form-btn');
 if (formBtn) {
     formBtn.addEventListener('click', () => {
         const inputs = document.querySelectorAll('.form-input, .form-textarea');
@@ -101,7 +112,7 @@ if (formBtn) {
         inputs.forEach(i => { if (i.value.trim()) hasValue = true; });
         if (hasValue) {
             formBtn.textContent = '✓ Message Sent!';
-            formBtn.style.background = 'linear-gradient(135deg,#4ade80,#22c55e)';
+            formBtn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
             setTimeout(() => {
                 formBtn.textContent = 'Send Message →';
                 formBtn.style.background = '';
